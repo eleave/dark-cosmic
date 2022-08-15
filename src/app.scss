@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SCREEN */
+html {
+  @apply min-h-full
+}
+
+body {
+  @apply text-gray-200;
+  background: #000 url("./images/cosmos.jpg") no-repeat  right bottom / cover ;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.screen {
+  @apply flex justify-center items-center gap-8 py-8;
+  @screen sm {
+    @apply min-h-screen 
+  }
+}
+
+.container {
+  width: 90%;
+  @screen sm {
+    width: 94%;
+  }
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* TYPOGRAPHY */
+p {
+  @apply pt-4 shadow-sm
+}
+
+/* BUTTONS */
+.btn {
+  @apply bg-yellow-300 hover:bg-yellow-400 text-black font-bold text-lg text-center py-4 px-12 shadow-lg
+}
+
+/* SCREEN */
+#screen {
+  --img-height: auto;
+  @screen sm {
+    --img-height: 40vh;
+  }
+  transition: margin-left .5s ease-in-out;
+  height: var(--img-height);
+  @screen xl {
+    --img-height: 70vh;
+    margin-left: -25%;
+  }
+  @screen 2xl {
+    margin-left: 0;
+  }
+  img {
+    max-width: 1200px;
+    height: var(--img-height);
+    min-height: 100%;
+    width: 100%;
+  }
+}
+#slides {
+  transform: scale(.9) translateY(-4px);
+  img {
+    object-fit: cover;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%, 0% 10%);
+  }
+}
