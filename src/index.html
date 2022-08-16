@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab&family=Noto+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="app.scss" />
   <script type="text/javascript" src="app.js" defer></script>
@@ -30,16 +30,16 @@
         <nav class="flex flex-row gap-8 text-lg items-center justify-center">
           <a href="#faq" class="font-bold hover:opacity-80">FAQ</a>
           <a href="#" class="font-bold hover:opacity-80">
-            <img src="./images/icons/twitter.svg" alt="tw" class="object-center w-6 h-6" />
+            <img src="./images/icons/twitter.svg" alt="tw" class="object-contain object-center w-6 h-6" />
           </a>
           <a href="#" class="font-bold hover:opacity-80">
-            <img src="./images/icons/opensea.svg" alt="os" class="object-center w-6 h-6" />
+            <img src="./images/icons/opensea.svg" alt="os" class="object-contain object-center w-6 h-6" />
           </a>
           <a href="#" class="font-bold hover:opacity-80">
-            <img src="./images/icons/etherscan.svg" alt="es" class="object-center w-6 h-6" />
+            <img src="./images/icons/etherscan.svg" alt="es" class="object-contain object-center w-6 h-6" />
           </a>
           <a href="#" class="font-bold hover:opacity-80">
-            <img src="./images/icons/discord.svg" alt="dd" class="object-center w-6 h-6" />
+            <img src="./images/icons/discord.svg" alt="dd" class="object-contain object-center w-6 h-6" />
           </a>
         </nav>
       </div>
@@ -47,24 +47,26 @@
   </header>
 
   <div class="screen relative">
-    <div class="container flex flex-col lg:flex-row gap-12 items-center justify-center">
+    <div class="container flex flex-col lg:flex-row gap-8 md:gap-32 items-center justify-center md:pt-16 lg:pt-0">
 
       <div class="leftside">
-        <div id="screen" class="relative">
-          <div id="slides">
-            <img src="./images/test.gif" alt="Image" />
+        <div class="relative">
+          <div id="border">
+            <img src="./images/rhombus.png" alt="Rhombus" />
           </div>
-          <img src="./images/border.png" alt="Image border" class="w-[655px] h-[655px]" />
+          <div id="slides" class="shadow-lg">
+            <img src="./images/bird.jpg" alt="Image" />
+          </div>
         </div>
       </div>
       <div class="rightside sm:w-[380px] space-y-8">
-        <h1 class="text-6xl leading-tight text-white font-bold drop-shadow-sm shadow-black">Space Birds</h1>
+        <h1 class="text-7xl leading-tight text-white drop-shadow-sm shadow-black">Space Birds</h1>
         <div class="description">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien ligula, ultrices at accumsan id,
             posuere eget nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <p>Maecenas scelerisque ultricies maximus. </p>
         </div>
-        <button class="btn !bg-emerald-300 hover:!bg-emerald-400">Connect Wallet</button>
+        <button class="btn !bg-emerald-400 hover:!bg-emerald-500">Connect Wallet</button>
       </div>
 
     </div>

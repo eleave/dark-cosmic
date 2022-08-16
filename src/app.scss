@@ -9,12 +9,12 @@ html {
 
 body {
   @apply text-gray-200;
-  background: #000 url("./images/space.jpg") no-repeat  right bottom / cover ;
+  background: #000 url("./images/space-2.jpg") no-repeat  right bottom / cover ;
   font-family: 'Noto Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Hepta Slab', serif;
+  font-family: 'Audiowide', cursive;
 }
 
 .screen {
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   @screen sm {
     width: 94%;
   }
-  max-width: 1080px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -43,18 +43,31 @@ p {
   @apply bg-gray-400 hover:bg-gray-500 text-black font-bold text-lg text-center py-4 px-12 shadow-lg
 }
 
-/* SCREEN */
-#screen {
-  transition: margin-left .5s ease-in-out;
+/* SCREEN BORDER */
+#border {
+  --border-height: 0;
+  @screen md {
+    --border-height: 512px;
+    transform: scale(1.3);
+  }
+  img {
+    width: var(--border-height);
+    height: var(--border-height);
+  }
 }
 #slides {
-  --img-height: 655px;
-  transform: scale(.9) translateY(-4px);
-  @apply absolute top-0 left-0;
+  --img-height: 512px;
   img {
-    width: var(--img-height);
-    height: var(--img-height);
-    object-fit: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     object-position: center;
+  }
+  @screen md {
+    @apply absolute top-0 left-0 bottom-0 flex items-center;
+    img {
+      width: var(--img-height);
+      height: var(--img-height);
+    }
   }
 }
