@@ -1,0 +1,2 @@
+const faq=document.querySelector("#faq"),faqList=faq.querySelectorAll(".card");function initFaqAccordion(c){const e=c.querySelector("h6"),t=c.querySelector(".card_content");e.onclick=c=>toggleFaqItem(e,t)}function toggleFaqItem(c,e){e.classList.contains("card__collapse")?(c.classList.add("card__active"),e.classList.remove("card__collapse"),e.style.height=`${e.scrollHeight}px`):(e.classList.add("card__collapse"),c.classList.remove("card__active"),e.style=void 0)}faqList.forEach((c=>initFaqAccordion(c)));
+//# sourceMappingURL=index.e298e6e4.js.map
