@@ -4,16 +4,20 @@
 
 /* SCREEN */
 html {
-  @apply min-h-full
+  @apply min-h-full scroll-smooth;
 }
 
 body {
   @apply text-gray-200;
-  background: #000 url("./images/space-2.jpg") no-repeat  right bottom / cover ;
   font-family: 'Noto Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+main {
+  @apply min-h-full;
+  background: #000 url("./images/dark-space.jpg") no-repeat  right bottom / cover ;
+}
+
+h1, h2, h3 {
   font-family: 'Audiowide', cursive;
 }
 
@@ -35,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* TYPOGRAPHY */
 p {
-  @apply pt-4 shadow-sm
+  @apply pb-4 shadow-sm
 }
 
 /* BUTTONS */
@@ -70,4 +74,22 @@ p {
       height: var(--img-height);
     }
   }
+}
+
+/* FAQ */
+.card p:last-of-type {
+  @apply pb-0
+}
+.card {
+  h6 {
+    @apply cursor-pointer hover:opacity-80;
+    &.card__active {
+      @apply text-teal-500 hover:opacity-100;
+    }
+  }
+  .card_content {
+    @apply overflow-hidden h-[1px];
+    transition: height .5s ease-in-out;
+  }
+  
 }
